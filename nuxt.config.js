@@ -20,6 +20,14 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
+  plugins: [
+    // ssr: false to only include it on client-side
+    { src: '~/plugins/vue-awesome-swiper', ssr: false }
+  ],
+  css: [
+    'swiper/dist/css/swiper.css'
+  ],
   /*
   ** Build configuration
   */
@@ -29,12 +37,12 @@ module.exports = {
     */
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
       }
       // 添加cur文件支持
       config.module.rules.push({

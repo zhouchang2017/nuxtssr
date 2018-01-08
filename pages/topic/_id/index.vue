@@ -1,17 +1,22 @@
 <template>
     <div>
-        <h1>id</h1>
-        <recommend-photographic/>
+        <article class="home-mian" role="main">
+            <main-swiper-4-pic-banner />
+            <div class="home-mian">
+                <div class="home-mian-left">
+                    <recommend-photographic/>
+                </div>
+            </div>
+        </article>
     </div>
 </template>
 
 <script>
-  import RecommendPhotographic from '~/components/RecommendPhotographic'
-
   export default {
     layout: 'topic',
     components: {
-      RecommendPhotographic
+      'recommend-photographic': () => import('~/components/RecommendPhotographic'),
+      'main-swiper-4-pic-banner': () => import('~/components/MainSwiper4PicBanner')
     },
     data () {
       return {}
