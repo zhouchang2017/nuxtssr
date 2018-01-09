@@ -4,11 +4,10 @@ const articleTypeItemMix = {
       type: Object,
       default: () => {
       }
-    },
+    }
   },
   data () {
     return {}
   }
 }
-
 export default articleTypeItemMix

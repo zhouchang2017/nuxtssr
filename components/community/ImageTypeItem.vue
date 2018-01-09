@@ -27,14 +27,15 @@
 </template>
 
 <script>
-    import typeMixin from './articleTypeItemMix'
-    export default {
-        mixins : [typeMixin],
-        name : "image-type-item" ,
-        data() {
-            return {}
-        }
+  import typeMixin from './articleTypeItemMix'
+
+  export default {
+    mixins: [typeMixin],
+    name: 'image-type-item',
+    data () {
+      return {}
     }
+  }
 </script>
 
 <style scoped>

@@ -12,7 +12,7 @@
       <div class="home-list">
         <ul class="home-list-ul" v-if="type.data.length!== 0">
           <li v-for="item in type.data" :key="`${item.article_type}_${item.content_type}_${item.id}`">
-            <community-list-item :_itemData="item"></community-list-item>
+            <community-list-item :_itemData="item" />
           </li>
         </ul>
         <div class="home-list-ul" v-else>

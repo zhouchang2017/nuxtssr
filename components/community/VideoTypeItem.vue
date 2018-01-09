@@ -40,7 +40,7 @@
         isPlay: false
       }
     },
-    mounted () {
+    created () {
       this.itemData.video_list.splice(0, 1, 'https://p-events-delivery.akamaized.net/17oiubaewrvouhboiubasdfv09/vod3/1709jbiuygwdfiug.mp4')
     },
     methods: {
