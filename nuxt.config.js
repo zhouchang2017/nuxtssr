@@ -5,33 +5,38 @@ module.exports = {
   head: {
     title: 'laravel',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: 'Nuxt.js project'}
     ],
     script: [
-      { src: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js' }
+      {src: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {href: 'https://at.alicdn.com/t/font_248424_8m9cczp6jsbutyb9.css', rel: 'stylesheet', type: 'text/css'},
     ]
   },
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {color: '#3B8070'},
 
   plugins: [
     // ssr: false to only include it on client-side
-    { src: '~/plugins/vue-awesome-swiper', ssr: false }
+    {src: '~/plugins/vue-awesome-swiper', ssr: false},
+    {src: '~/plugins/axios'},
+    {src: '~/util/filter'}
   ],
   css: [
-    'swiper/dist/css/swiper.css'
+    'swiper/dist/css/swiper.css',
+    '~/css/pagination.css'
   ],
   /*
   ** Build configuration
   */
   build: {
+    vendor: ['axios', 'moment'],
     /*
     ** Run ESLint on save
     */

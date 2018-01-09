@@ -28,7 +28,7 @@
 </template>
 
 <script>
-    import typeMixin from '@c/articleTypeItemMix'
+    import typeMixin from './articleTypeItemMix'
 
     export default {
         mixins : [typeMixin] ,
