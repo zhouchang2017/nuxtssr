@@ -30,7 +30,7 @@
           <p>2分钟前</p>
         </div>
       </li>
-      <a href="#" class="go-vrnamic">进入社区广场</a>
+      <nuxt-link class="go-vrnamic" :to="{name:'topic-id-square',params:{id:this.$route.params.id}}">进入社区广场</nuxt-link>
     </ul>
   </div>
 </template>

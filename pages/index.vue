@@ -9,8 +9,12 @@
         Nuxt.js project
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+        <nuxt-link class="button--green" target="_blank" to="/topic/1">无人机社区</nuxt-link>
+        <nuxt-link class="button--green" to="/topic/1/square">无人机广场</nuxt-link>
+        <nuxt-link class="button--green" target="_blank" to="/topic/2">VR社区</nuxt-link>
+        <nuxt-link class="button--green" target="_blank" to="/topic/3">苹果社区</nuxt-link>
+        <nuxt-link class="button--green" target="_blank" to="/topic/4">大疆社区</nuxt-link>
+        <nuxt-link class="button--green" target="_blank" to="/topic/5">手机社区</nuxt-link>
       </div>
     </div>
   </section>

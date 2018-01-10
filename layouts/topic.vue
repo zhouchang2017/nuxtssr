@@ -1,21 +1,17 @@
 <template>
-    <div>
-        <div>head</div>
-        <nuxt/>
-        <div>foot</div>
-    </div>
+  <div>
+    <nuxt/>
+  </div>
 </template>
 
 <script>
-  export default {
-    components: {}
-  }
+  export default {}
 </script>
 
 <style lang="less">
-    @import '../css/NormalizeDemo.css';
-    @import '../css/bk-UI.css';
-    @import '../css/home.css';
-    @import '../css/listshow.css';
-    @import '../css/articledetails.css';
+  @import '../css/NormalizeDemo.css';
+  @import '../css/bk-UI.css';
+  @import '../css/home.css';
+  @import '../css/listshow.css';
+  @import '../css/articledetails.css';
 </style>

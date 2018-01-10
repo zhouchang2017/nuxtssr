@@ -1,3 +1,5 @@
+const resolve = require('path').resolve
+
 module.exports = {
   /*
   ** Headers of the page
@@ -57,6 +59,15 @@ module.exports = {
           limit: 10000, // 10KO
           name: 'img/[name].[hash].[ext]'
         }
+      })
+    }
+  },
+  router: {
+    extendRoutes (routes) {
+      routes.push({
+        name: 'square',
+        path: '/topic/:id/square',
+        component: resolve(__dirname, 'pages/topic/_id/square.vue')
       })
     }
   }

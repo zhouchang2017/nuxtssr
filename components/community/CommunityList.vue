@@ -12,7 +12,7 @@
       <div class="home-list">
         <ul class="home-list-ul" v-if="type.data.length!== 0">
           <li v-for="item in type.data" :key="`${item.article_type}_${item.content_type}_${item.id}`">
-            <community-list-item :_itemData="item" />
+            <community-list-item :_itemData="item"/>
           </li>
         </ul>
         <div class="home-list-ul" v-else>
@@ -27,6 +27,7 @@
         </pagination>
       </div>
     </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -35,6 +36,7 @@
   import CommunityListItem from './CommunityListItem'
   import axios from 'axios'
   import api from '~/util/api.config'
+
   export default {
     components: {
       pagination,
@@ -53,6 +55,7 @@
         default: false
       }
     },
+    scrollToTop: false,
     data () {
       return {
         loading: false,
@@ -74,7 +77,11 @@
         type.active = true
         this.summary_catalog_id = type.summary_catalog_id
         let page = this.typesLastPage.hasOwnProperty([type.name_en]) ? this.typesLastPage[type.name_en] : 1
-        this.getResources(type, page)
+        if (process.client) {
+          // this.$router.push({query: {filter: type.name_en}})
+          this.getResources(type, page)
+          history.pushState({},0,`${this.$route.path}?filter=${type.name_en}`)
+        }
       },
       async getResources (type, page = 1) {
         this.loading = false
@@ -88,7 +95,6 @@
           }
           // 加载分页数据
         }
-        console.log(type)
         let res
         if (this.isSquare) {
           res = await axios.get(`${api.community.getArticle(this.id, type.id)}?page=${page}`)
@@ -123,14 +129,18 @@
         return active
       }
     },
+    beforeCreate(){
+    },
     created () {
       this.loading = false
-      this.listType = this.types.map((item, ind) => {
-        item.active = false
+      let filter = this.$route.query.hasOwnProperty('filter') ? this.$route.query.filter : 'all'
+      this.listType.push({summary_catalog_id: 0, name_en: 'all', name_cn: '全部'})
+      this.listType.push(...this.types)
+      this.listType = this.listType.map((item) => {
+        item.active = item.name_en === filter
         return item
       })
-      this.$set(this.initData, 'all', this._initData)
-      this.listType.unshift({summary_catalog_id: 0, name_en: 'all', name_cn: '全部', active: true})
+      this.$set(this.initData, filter, this._initData)
       this.loading = true
     },
     mounted () {

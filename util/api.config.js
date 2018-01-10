@@ -48,8 +48,14 @@ const API = {
     getSummaryList (id, type) {
       return `/api/topic/${id}/${type}`
     },
-    getCommunity (id,api = true) {
+    getSummary (id, type,api=true) {
+      return `/api/ssr/topic/${id}/${type}?api=${api}`
+    },
+    getCommunity (id, api = true) {
       return `api/topic/${id}?api=${api}`
+    },
+    getCommunitySquare (id, api = true) {
+      return `api/topic/${id}/square?api=${api}`
     }
   },
   // 用户相关
