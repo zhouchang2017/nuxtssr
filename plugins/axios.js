@@ -6,7 +6,7 @@ export default ({app, store, redirect}) => {
   // if (process.SERVER_BUILD) {
   //   axios.defaults.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 80}`
   // }
-  axios.defaults.baseURL = 'http://www.app.dev'
+  axios.defaults.baseURL = 'http://www.app.de'
   // interceptors request
   axios.interceptors.request.use (config => {
     if (typeof document === 'object') {

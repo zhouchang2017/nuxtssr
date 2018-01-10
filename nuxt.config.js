@@ -28,7 +28,8 @@ module.exports = {
     // ssr: false to only include it on client-side
     {src: '~/plugins/vue-awesome-swiper', ssr: false},
     {src: '~/plugins/axios'},
-    {src: '~/util/filter'}
+    {src: '~/util/filter'},
+    {src: '~/util/globalComponent'}
   ],
   css: [
     'swiper/dist/css/swiper.css',
@@ -59,15 +60,6 @@ module.exports = {
           limit: 10000, // 10KO
           name: 'img/[name].[hash].[ext]'
         }
-      })
-    }
-  },
-  router: {
-    extendRoutes (routes) {
-      routes.push({
-        name: 'square',
-        path: '/topic/:id/square',
-        component: resolve(__dirname, 'pages/topic/_id/square.vue')
       })
     }
   }

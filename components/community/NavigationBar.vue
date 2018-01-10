@@ -8,40 +8,21 @@
                 <input type="checkbox" v-model="onlyVideo" class="box-lab"/><label class="box-lab"></label>只看视频
             </div>
         </ul>
-        <div v-for="(type,ind) in initData" v-show="ind === activeType.name_en">
-            <div class="home-list">
-                <ul class="home-list-ul" v-if="type.data.length!== 0">
-                    <li v-for="item in type.data" :key="`${item.article_type}_${item.content_type}_${item.id}`">
-                        <community-list-item :_itemData="item"/>
-                    </li>
-                </ul>
-                <div class="home-list-ul" v-else>
-                    <div>暂无帖子！</div>
-                </div>
-            </div>
-
-            <div class="home-page" v-if="type.last_page > 1">
-                <pagination :total="type.total" :page-size="type.per_page" :callback="pageChanged"
-                            :options="paginationOptions" nav-class="padding-10" ul-class="floor-answer-Inputbox"
-                            li-class="txt-color-blue">
-                </pagination>
-            </div>
+        <div class="home-list">
+            <slot></slot>
         </div>
-        <slot></slot>
+
+        <div class="home-page">
+            分页
+        </div>
     </div>
 </template>
 
 <script>
-  import pagination from '../Pagination'
-  import CommunityListItem from './CommunityListItem'
   import axios from 'axios'
   import api from '~/util/api.config'
 
   export default {
-    components: {
-      pagination,
-      CommunityListItem
-    },
     props: {
       _initData: [Object, Array],
       types: Array,
@@ -55,7 +36,6 @@
         default: false
       }
     },
-    scrollToTop: false,
     data () {
       return {
         loading: false,
@@ -77,12 +57,10 @@
         type.active = true
         this.summary_catalog_id = type.summary_catalog_id
         let page = this.typesLastPage.hasOwnProperty([type.name_en]) ? this.typesLastPage[type.name_en] : 1
-        if (process.client) {
-          // this.$router.push({query: {filter: type.name_en}})
-          console.log(type)
-          this.getResources(type, page)
-          history.pushState({}, 0, `${this.$route.path}?filter=${type.name_en}`)
-        }
+        this.$router.push({query: {filter: type.name_en}})
+        // console.log(type)
+        // this.getResources(type, page)
+        // history.pushState({}, 0, `${this.$route.path}?filter=${type.name_en}`)
       },
       async getResources (type, page = 1) {
         this.loading = false
@@ -149,3 +127,7 @@
     }
   }
 </script>
+
+<style scoped>
+
+</style>
