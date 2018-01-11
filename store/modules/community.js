@@ -30,13 +30,12 @@ const getters = {
 
 // actions
 const actions = {
-  // 社区一级首页首屏数据请求
-  async getCommunitySub ({commit}, {params, query}) {
-    let q = encodeSearchParams(query)
-    let url = `${api.community.getCommunity(params.id)}&${q}`
+  // 社区一级页社区信息，模块数据请求
+  async getCommunitySub ({commit}, params) {
+    let url = `${api.community.getCommunity(params.id)}`
     let {data} = await axios.get(url)
     commit('SET_CUR_NAV_BAR', data.community.types)
-    commit('SET_COMMUNITY_BODY', data.community.body)
+    // commit('SET_COMMUNITY_BODY', data.community.body)
     commit('SET_COMMUNITY_INFO', {
       info: data.communityInfo, author_num: data.community.author_num, author_users: data.community.author_users
     })
@@ -45,11 +44,12 @@ const actions = {
     commit('SET_MODULES', data.community)
   },
   // 子社区页面body数据请求
-  async getCommunitySubListPage ({commit, getters}, {type, page = 1}) {
-    let params = encodeSearchParams({is_choice: 1, page})
-    let url = api.article.getArticleListByCommunityIdWithType(getters.communityInfo.id, type)
+  async getCommunitySubListPage ({commit, getters}, query) {
+    let params = encodeSearchParams({is_choice: 1, ...query})
+    let url = api.community.getSummary(getters.communityInfo.id)
     let {data} = await axios.get(`${url}?${params}`)
     commit('SET_COMMUNITY_BODY', data)
+    commit('SET_PAGINATION', data)
   },
   // 社区广场首页数据请求
   async getCommunitySquare ({commit}, {params, query}) {

@@ -48,11 +48,11 @@ const API = {
     getSummaryList (id, type) {
       return `/api/topic/${id}/${type}`
     },
-    getSummary (id, type, api = true) {
-      return `/api/ssr/topic/${id}/${type}?api=${api}`
+    getSummary (id, type) {
+      return `/api/v1/topic/${id}/${type}`
     },
-    getCommunity (id, api = true) {
-      return `api/topic/${id}?api=${api}`
+    getCommunity (id) {
+      return `api/v1/topic/${id}`
     },
     getCommunitySquare (id, api = true) {
       return `api/topic/${id}/square?api=${api}`

@@ -37,7 +37,8 @@ module.exports = {
   ],
   css: [
     'swiper/dist/css/swiper.css',
-    '~/css/pagination.css'
+    '~/css/pagination.css',
+    'assets/css/main.css'
   ],
   /*
   ** Build configuration

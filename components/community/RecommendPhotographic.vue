@@ -13,12 +13,18 @@
                 <a href="#" class="user-img"><img :src="items[0].user.avatar" alt=""></a>
                 <h4 class="user-name">{{items[0].user.nickname}}</h4>
                 <div class="user-brief">{{items[0].title | str_limit(20)}}</div>
-                <div class="user-commodity">
+                <div v-if="items[0].products[0]" class="user-commodity">
                     <i class="iconfont icon-wurenji"></i>
-                  {{items[0].products[0].name | str_limit(20)}}
+                    {{items[0].products[0].name  | str_limit(20)}}
                 </div>
-                <div class="user-name">
-                  {{items[0].products[0].description | str_limit(50)}}
+                <div v-else class="user-brief">
+                    无产品！
+                </div>
+                <div v-if="items[0].products[0]" class="user-name">
+                    {{items[0].products[0].description  | str_limit(50)}}
+                </div>
+                <div v-else class="user-name">
+                    无产品！
                 </div>
             </div>
             <div v-if="items[1]" class="home-left-parent">
