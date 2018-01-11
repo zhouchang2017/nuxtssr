@@ -116,6 +116,11 @@
         this.currentPage = page;
         this.callback(page);
       }
+    },
+    created () {
+      let page = this.$store.state.pagination.pageInfo.current_page
+      let last = this.$store.state.pagination.pageInfo.last_page
+      this.currentPage = page && page <= last ? page : 1
     }
   }
 </script>

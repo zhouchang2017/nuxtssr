@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c1c51d90-7b99-4558-a70d-e06d7c74edc2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/components/community/CommunityList.vue" afterPath="$PROJECT_DIR$/components/community/CommunityList.vue" />
+      <change beforePath="$PROJECT_DIR$/components/Pagination.vue" afterPath="$PROJECT_DIR$/components/Pagination.vue" />
+      <change beforePath="$PROJECT_DIR$/components/community/NavigationBar.vue" afterPath="$PROJECT_DIR$/components/community/NavigationBar.vue" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
-      <change beforePath="$PROJECT_DIR$/pages/topic/_id/idle.vue" afterPath="" />
       <change beforePath="$PROJECT_DIR$/pages/topic/_id/index.vue" afterPath="$PROJECT_DIR$/pages/topic/_id/index.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/topic/_id/square/square.vue" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pages/topic/_id/summary_mixins.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pages/topic/_id/index/index.vue" afterPath="$PROJECT_DIR$/pages/topic/_id/index/index.vue" />
+      <change beforePath="$PROJECT_DIR$/pages/topic/_id/square.vue" afterPath="$PROJECT_DIR$/pages/topic/_id/square.vue" />
+      <change beforePath="$PROJECT_DIR$/pages/topic/_id/square/index.vue" afterPath="$PROJECT_DIR$/pages/topic/_id/square/index.vue" />
       <change beforePath="$PROJECT_DIR$/plugins/axios.js" afterPath="$PROJECT_DIR$/plugins/axios.js" />
+      <change beforePath="$PROJECT_DIR$/store/index.js" afterPath="$PROJECT_DIR$/store/index.js" />
+      <change beforePath="$PROJECT_DIR$/util/api.config.js" afterPath="$PROJECT_DIR$/util/api.config.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="square.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/topic/_id/square.vue">
+      <file leaf-file-name="SummaryList.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/community/SummaryList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1294">
-              <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+            <state relative-caret-position="297">
+              <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -53,6 +56,8 @@
       <find>name</find>
       <find>square</find>
       <find>filter</find>
+      <find>getArticleListByCommunityIdWithType</find>
+      <find>community</find>
     </findStrings>
     <replaceStrings>
       <replace>~assets/fonts</replace>
@@ -65,18 +70,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/community/RecommendPhotographic.vue" />
-        <option value="$PROJECT_DIR$/components/community/JoinCommunity.vue" />
-        <option value="$PROJECT_DIR$/components/community/Idel.vue" />
-        <option value="$PROJECT_DIR$/components/community/Exhibition.vue" />
-        <option value="$PROJECT_DIR$/components/community/Question.vue" />
         <option value="$PROJECT_DIR$/components/community/Coupons.vue" />
         <option value="$PROJECT_DIR$/components/community/MainSwiper4PicBanner.vue" />
         <option value="$PROJECT_DIR$/components/community/Main3PicBanner.vue" />
         <option value="$PROJECT_DIR$/components/community/PublishEntry.vue" />
         <option value="$PROJECT_DIR$/util/filter.js" />
         <option value="$PROJECT_DIR$/plugins/vue-pagination-bootstrap.js" />
-        <option value="$PROJECT_DIR$/components/Pagination.vue" />
         <option value="$PROJECT_DIR$/plugins/vue-awesome-swiper.js" />
         <option value="$PROJECT_DIR$/components/community/VideoTypeItem.vue" />
         <option value="$PROJECT_DIR$/components/community/MixTypeItem.vue" />
@@ -94,13 +93,9 @@
         <option value="$PROJECT_DIR$/store/mutations.js" />
         <option value="$PROJECT_DIR$/store/getters.js" />
         <option value="$PROJECT_DIR$/store/actions.js" />
-        <option value="$PROJECT_DIR$/store/index.js" />
-        <option value="$PROJECT_DIR$/util/api.config.js" />
         <option value="$PROJECT_DIR$/pages/topic/_id/_summary.vue" />
         <option value="$PROJECT_DIR$/pages/topic/_id/idle.vue" />
         <option value="$PROJECT_DIR$/pages/topic/_id/summary_mixins.js" />
-        <option value="$PROJECT_DIR$/plugins/axios.js" />
-        <option value="$PROJECT_DIR$/components/community/CommunityList.vue" />
         <option value="$PROJECT_DIR$/pages/topic/_id/article_type.vue" />
         <option value="$PROJECT_DIR$/pages/topic/_id.vue" />
         <option value="$PROJECT_DIR$/pages/topic/_id/_article_type.vue" />
@@ -109,13 +104,23 @@
         <option value="$PROJECT_DIR$/pages/topic/_id/_id.vue" />
         <option value="$PROJECT_DIR$/.nuxt/router.js" />
         <option value="$PROJECT_DIR$/pages/topic/_id/index/_article_type.vue" />
-        <option value="$PROJECT_DIR$/nuxt.config.js" />
         <option value="$PROJECT_DIR$/util/globalComponent.js" />
+        <option value="$PROJECT_DIR$/plugins/axios.js" />
+        <option value="$PROJECT_DIR$/components/community/CommunityList.vue" />
+        <option value="$PROJECT_DIR$/store/index.js" />
         <option value="$PROJECT_DIR$/pages/topic/_id/index.vue" />
-        <option value="$PROJECT_DIR$/pages/topic/_id/index/index.vue" />
+        <option value="$PROJECT_DIR$/store/modules/pagination.js" />
+        <option value="$PROJECT_DIR$/util/helper.js" />
         <option value="$PROJECT_DIR$/components/community/NavigationBar.vue" />
+        <option value="$PROJECT_DIR$/components/Pagination.vue" />
+        <option value="$PROJECT_DIR$/nuxt.config.js" />
+        <option value="$PROJECT_DIR$/middleware/communitySub.js" />
         <option value="$PROJECT_DIR$/pages/topic/_id/square.vue" />
+        <option value="$PROJECT_DIR$/pages/topic/_id/index/index.vue" />
         <option value="$PROJECT_DIR$/pages/topic/_id/square/index.vue" />
+        <option value="$PROJECT_DIR$/util/api.config.js" />
+        <option value="$PROJECT_DIR$/store/modules/community.js" />
+        <option value="$PROJECT_DIR$/components/community/SummaryList.vue" />
       </list>
     </option>
   </component>
@@ -137,11 +142,11 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="121" />
-    <option name="y" value="62" />
-    <option name="width" value="1260" />
-    <option name="height" value="632" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="11" />
+    <option name="y" value="35" />
+    <option name="width" value="1261" />
+    <option name="height" value="633" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -175,68 +180,79 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name=".nuxt" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="community" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="middleware" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="topic" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="topic" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="_id" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="topic" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="_id" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="topic" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="_id" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="square" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="store" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="store" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="nuxtssr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuxtssr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="util" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -257,18 +273,20 @@
     <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="standardjs.codestyle.accepted" value="true" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="SearchEverywhereHistoryKey" value="getArticleListByCommunityIdWithType&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/pages/topic" />
-      <recent name="$PROJECT_DIR$/components/community" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages/topic/_id/index" />
       <recent name="$PROJECT_DIR$/pages/topic/_id/square" />
       <recent name="$PROJECT_DIR$/pages/topic/_id" />
       <recent name="$PROJECT_DIR$/pages/topic/index" />
+      <recent name="$PROJECT_DIR$/components/community" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/middleware" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/pages/topic" />
       <recent name="$PROJECT_DIR$/components/community" />
     </key>
   </component>
@@ -302,34 +320,36 @@
       <workItem from="1515500290685" duration="2013000" />
       <workItem from="1515548411689" duration="23719000" />
       <workItem from="1515587404817" duration="6640000" />
+      <workItem from="1515634048189" duration="27259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67423000" />
+    <option name="totallyTimeSpent" value="94682000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="720" extended-state="0" />
+    <frame x="11" y="35" width="1261" height="633" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23156226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,37 +365,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/community/PublishEntry.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/vue-pagination-bootstrap.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/_vue-pagination-bootstrap@1.0.3@vue-pagination-bootstrap/index.js" />
-    <entry file="file://$PROJECT_DIR$/components/Pagination.vue" />
-    <entry file="file://$PROJECT_DIR$/plugins/vue-awesome-swiper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/swiper/MainSwiper.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/community/VideoTypeItem.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/community/MixTypeItem.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -387,14 +376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="992">
           <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/community/CommunityListItem.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -412,9 +393,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="10" column="49" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="e#2769#2794#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -422,20 +401,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="e#2769#2794#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id/square/square.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-206">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id/square/square.vue" />
     <entry file="file://$PROJECT_DIR$/less/topic.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -447,33 +417,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/topic_summary.less" />
     <entry file="file://$PROJECT_DIR$/layouts/topic_summary.vue" />
     <entry file="file://$PROJECT_DIR$/store/summary.js" />
-    <entry file="file://$PROJECT_DIR$/store/mutations.js" />
     <entry file="file://$PROJECT_DIR$/store/getters.js" />
     <entry file="file://$PROJECT_DIR$/store/actions.js" />
-    <entry file="file://$PROJECT_DIR$/store/index.js" />
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id/square/square.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/api.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id/square/square.vue" />
     <entry file="file://$PROJECT_DIR$/components/community/articleTypeItemMix.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -486,74 +438,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.nuxt/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2155">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id/_id/_article_type.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id/_id.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id/_article_type/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id/index/_article_type.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.nuxt/App.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id/_id/_article_type.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id/_id.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id/_article_type/index.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id/index/_article_type.vue" />
     <entry file="file://$PROJECT_DIR$/pages/topic/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -570,98 +463,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topic/_id/square 下午10.53.47/index.vue">
+    <entry file="file://$PROJECT_DIR$/pages/topic/_id/square 下午10.53.47/index.vue" />
+    <entry file="file://$PROJECT_DIR$/util/filter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.nuxt/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="80" column="31" lean-forward="true" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+        <state relative-caret-position="267">
+          <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/filter.js">
+    <entry file="file://$PROJECT_DIR$/store/mutations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/globalComponent.js">
+    <entry file="file://$PROJECT_DIR$/components/community/CommunityListItem.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1798">
+          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/community/CommunityList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="142" column="8" lean-forward="true" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+        <state relative-caret-position="369">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#1492#1530#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/community/NavigationBar.vue">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1579">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="254">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/globalComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
-            <element signature="e#669#694#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/modules/pagination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Pagination.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3782">
+          <caret line="122" column="52" lean-forward="false" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/topic/_id/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="21" column="37" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="427">
+          <caret line="70" column="42" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/topic/_id/index/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="35" />
+        <state relative-caret-position="527">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="17" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/topic/_id/square/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        <state relative-caret-position="279">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/community/NavigationBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/communitySub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/communitySquare.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/api.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/topic/_id/square.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1294">
-          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state relative-caret-position="279">
+          <caret line="59" column="32" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/modules/community.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/community/SummaryList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="73" />
           <folding />
         </state>
       </provider>

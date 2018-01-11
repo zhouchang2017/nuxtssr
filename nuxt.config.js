@@ -1,6 +1,10 @@
 const resolve = require('path').resolve
 
 module.exports = {
+  cache: {
+    max: 1000,
+    maxAge: 900000
+  },
   /*
   ** Headers of the page
   */

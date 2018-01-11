@@ -1,34 +1,35 @@
 <template>
-    <div>
-        <article class="home-mian" role="main">
-            <div class="home-mian">
-                <div class="home-mian-left">
-                    <navigation-bar :isSquare="true" v-if="initData.community.modules['community-list']"
-                                    :_initData="initData.community.body"
-                                    :types="initData.community.contentSystem" :id="initData.id">
-                        <nuxt-child/>
-                    </navigation-bar>
-                </div>
-                <div class="home-mian-right">
-                    <publish-entry v-if="initData.community.modules.publish_entry" :items="initData.community.contentSystem"/>
-                    <!--<community-dynamics v-if="initData.community.modules.community_dynamics"/>-->
-                    <hot-new-product v-if="initData.community.modules.hot_new_price"/>
-                    <coupons v-if="initData.community.modules.good_price" :items="initData.community.good_price"/>
-                    <idel v-if="initData.community.modules.second_handle" :items="initData.community.second_handle"/>
-                    <exhibition
-                            v-if="initData.community.modules['equip-show-swiper'] && initData.community['equip-show-swiper'].length>0"
-                            :items="initData.community['equip-show-swiper']"/>
-                    <question v-if="initData.community.modules.answers_list && initData.community.answers_list.length>0"
-                              :items="initData.community.answers_list"/>
-                </div>
-            </div>
-        </article>
-    </div>
+  <div>
+    <article class="home-mian" role="main">
+      <div class="home-mian">
+        <div class="home-mian-left">
+          <navigation-bar v-if="$store.state.community.modules['community-list']"
+                          :types="$store.state.community.content_types" :id="$store.state.community.community_info.id">
+            <nuxt-child/>
+          </navigation-bar>
+        </div>
+        <div class="home-mian-right">
+          <publish-entry v-if="$store.state.community.modules.publish_entry"
+                         :items="$store.state.community.content_system"/>
+          <!--<community-dynamics v-if="initData.community.modules.community_dynamics"/>-->
+          <hot-new-product v-if="$store.state.community.modules.hot_new_price"/>
+          <coupons v-if="$store.state.community.modules.good_price" :items="$store.state.community.good_price"/>
+          <idel v-if="$store.state.community.modules.second_handle" :items="$store.state.community.second_handle"/>
+          <exhibition
+            v-if="$store.state.community.modules['equip-show-swiper'] && $store.state.community['equip-show-swiper'].length>0"
+            :items="$store.state.community['equip-show-swiper']"/>
+          <question v-if="$store.state.community.modules.answers_list && $store.state.community.answers_list.length>0"
+                    :items="$store.state.community.answers_list"/>
+        </div>
+      </div>
+    </article>
+  </div>
 </template>
 
 <script>
   import axios from 'axios'
   import api from '~/util/api.config'
+
   export default {
     layout: 'topic',
     components: {
@@ -55,12 +56,10 @@
         css: [{src: '~/less/topic.less', lang: 'less'}]
       }
     },
-    async asyncData ({params, query}) {
-      let url = query.hasOwnProperty('filter') ?
-        `${api.community.getCommunitySquare(params.id)}&article_type=${query.filter}` :
-        `${api.community.getCommunitySquare(params.id)}`
-      let {data} = await axios.get(url)
-      return {initData: data, title: `棒客-${data.communityInfo.name}-广场`}
+    async asyncData ({store, params, query}) {
+      await store.dispatch('getCommunitySquare', {params, query})
+      store.commit('SET_PAGINATION', store.getters.communityBody)
+      return {title: `棒客-${store.getters.communityInfo.name}-广场`}
     },
     fetch () {
       // The fetch method is used to fill the store before rendering the page

@@ -37,7 +37,7 @@ const API = {
       return `/report/${content_type}`
     }
   },
-  //社区相关
+  // 社区相关
   community: {
     getUrl (id) {
       return `/topic/${id}`
@@ -48,7 +48,7 @@ const API = {
     getSummaryList (id, type) {
       return `/api/topic/${id}/${type}`
     },
-    getSummary (id, type,api=true) {
+    getSummary (id, type, api = true) {
       return `/api/ssr/topic/${id}/${type}?api=${api}`
     },
     getCommunity (id, api = true) {
@@ -70,7 +70,7 @@ const API = {
     follow (id) {
       return `/user/${id}/follow`
     },
-    //用户中心
+    // 用户中心
     home (id) {
       return `/user/${id}`
     }
@@ -114,9 +114,9 @@ const API = {
     getDraft (summary_id) {
       return `/article/draft/${summary_id}`
     },
-    //通过社区id文章类型获取文章分页列表
+    // 通过社区id文章类型获取文章分页列表
     getArticleListByCommunityIdWithType (community_id, article_type) {
-      return article_type !== 'all' ? `/topic/${community_id}/article_type/${article_type}` : `/topic/${community_id}/article_type/`
+      return article_type !== 'all' ? `api/topic/${community_id}/article_type/${article_type}` : `api/topic/${community_id}/article_type`
     }
   },
   // 产品相关
