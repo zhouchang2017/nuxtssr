@@ -47,10 +47,10 @@
 </template>
 
 <script>
-    import UserAvatarMedia from '@c/UserAvatarMedia'
-    import BestKitSwiper from '@c/swiper/BestKitSwiperA'
-    import CollectButton from '@c/CollectButton'
-    import CommentList from '@c/CommentList'
+    import UserAvatarMedia from '~assets/imgUserAvatarMedia'
+    import BestKitSwiper from '~assets/imgswiper/BestKitSwiperA'
+    import CollectButton from '~assets/imgCollectButton'
+    import CommentList from '~assets/imgCommentList'
     import moment from 'moment'
     export default {
         components : {

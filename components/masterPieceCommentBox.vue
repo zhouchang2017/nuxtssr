@@ -60,9 +60,9 @@ id:文章id Number require
 
  */
 import masterPieceCommentSkeleton from './masterPieceCommentSkeleton'
-import replyBox from '@c/ReplyBox'
+import replyBox from '~assets/imgReplyBox'
 import pagination from 'vue-pagination-bootstrap'
-import agreeButton from '@c/AgreeButton'
+import agreeButton from '~assets/imgAgreeButton'
 export default {
   props: {
     id: Number,

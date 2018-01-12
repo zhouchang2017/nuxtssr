@@ -35,7 +35,6 @@ const actions = {
     let url = `${api.community.getCommunity(params.id)}`
     let {data} = await axios.get(url)
     commit('SET_CUR_NAV_BAR', data.community.types)
-    // commit('SET_COMMUNITY_BODY', data.community.body)
     commit('SET_COMMUNITY_INFO', {
       info: data.communityInfo, author_num: data.community.author_num, author_users: data.community.author_users
     })
@@ -44,21 +43,21 @@ const actions = {
     commit('SET_MODULES', data.community)
   },
   // 子社区页面body数据请求
-  async getCommunitySubListPage ({commit, getters}, query) {
-    let params = encodeSearchParams({is_choice: 1, ...query})
-    let url = api.community.getSummary(getters.communityInfo.id)
-    let {data} = await axios.get(`${url}?${params}`)
-    commit('SET_COMMUNITY_BODY', data)
-    commit('SET_PAGINATION', data)
+  async getCommunitySubListPage ({commit}, {params, query, is_choice = null, _with = null}) {
+    console.log(_with)
+    let filter = _with ? encodeSearchParams({is_choice, ...query, ..._with}) : encodeSearchParams({is_choice, ...query})
+    let url = api.community.getSummary(params.id)
+    console.log(`${url}?${filter}`)
+    let {data} = await axios.get(`${url}?${filter}`)
+    commit('SET_COMMUNITY_BODY', data.body)
+    commit('SET_PAGINATION', data.body)
   },
   // 社区广场首页数据请求
-  async getCommunitySquare ({commit}, {params, query}) {
-    let q = encodeSearchParams(query)
-    let url = `${api.community.getCommunitySquare(params.id)}&${q}`
+  async getCommunitySquare ({commit}, params) {
+    let url = `${api.community.getCommunitySquare(params.id)}`
     console.log(url)
     let {data} = await axios.get(url)
     commit('SET_CUR_NAV_BAR', data.community.types)
-    commit('SET_COMMUNITY_BODY', data.community.body)
     commit('SET_COMMUNITY_INFO', {
       info: data.communityInfo, author_num: data.community.author_num, author_users: data.community.author_users
     })
@@ -66,12 +65,18 @@ const actions = {
     commit('SET_CONTENT_TYPE', data.community.contentSystem)
     commit('SET_MODULES', data.community)
   },
-  // 社区广场页body数据请求
-  async getCommunitySquareListPage ({commit, getters}, {type, page = 1}) {
-    let params = encodeSearchParams({is_choice: 1, page})
-    let url = api.article.getArticleListByCommunityIdWithType(getters.communityInfo.id, type)
-    let {data} = await axios.get(`${url}?${params}`)
-    commit('SET_COMMUNITY_BODY', data)
+  // summaryCatalog子列表页数据请求
+  async getSummaryCatalog ({commit}, params) {
+    let url = `${api.community.getSummaryCatalog(params)}`
+    console.log(url)
+    let {data} = await axios.get(url)
+    // commit('SET_CUR_NAV_BAR', data.community.types)
+    commit('SET_COMMUNITY_INFO', {
+      info: data.community_info, author_num: data.community.author_num, author_users: data.community.author_users
+    })
+    // commit('SET_CONTENT_SYSTEM', data.community.contentSystem)
+    // commit('SET_CONTENT_TYPE', data.community.contentSystem)
+    // commit('SET_MODULES', data.community)
   }
 }
 
@@ -82,7 +87,7 @@ const mutations = {
   // 保存当前子社区内容
   SET_COMMUNITY_BODY: (state, body) => state.community_body = body,
   // 保存社区信息
-  SET_COMMUNITY_INFO: (state, {info, author_num, author_users}) => {
+  SET_COMMUNITY_INFO: (state, {info, author_num = null, author_users = null}) => {
     state.community_info = info
     state.hot_community_author = {author_num, author_users}
   },

@@ -7,7 +7,7 @@
                 <!--{{pickUp ? '收起' : '展开'}}-->
                 <!--</span>-->
             </div>
-            <ul v-if="itemData.image_list.length>0" class="home-list-content-img">
+            <ul v-if="itemData.hasOwnProperty('image_list') && itemData.image_list.length>0" class="home-list-content-img">
                 <li v-if="itemData.image_list.length<=3" v-for="image in itemData.image_list" :key="image"><img
                         :src="image"></li>
             </ul>

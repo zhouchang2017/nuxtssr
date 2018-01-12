@@ -51,7 +51,7 @@
 </template>
 
 <script>
-    import CollectButtonByText from '@c/CollectButtonByText';
+    import CollectButtonByText from '~assets/imgCollectButtonByText';
     export default {
         name: "list-item-question",
         props: {
@@ -59,8 +59,8 @@
             item:Object
         },
         components: {
-            'agree-button': () => import('@c/AgreeButton'),
-            'user-info': () => import('@c/user/UserInfo'),
+            'agree-button': () => import('~assets/imgAgreeButton'),
+            'user-info': () => import('~assets/imguser/UserInfo'),
             CollectButtonByText
         },
         data () {

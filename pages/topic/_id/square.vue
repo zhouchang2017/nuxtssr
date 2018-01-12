@@ -4,6 +4,7 @@
       <div class="home-mian">
         <div class="home-mian-left">
           <navigation-bar v-if="$store.state.community.modules['community-list']"
+                          firstField="square"
                           :types="$store.state.community.content_types" :id="$store.state.community.community_info.id">
             <nuxt-child/>
           </navigation-bar>
@@ -57,8 +58,8 @@
       }
     },
     async asyncData ({store, params, query}) {
-      await store.dispatch('getCommunitySquare', {params, query})
-      store.commit('SET_PAGINATION', store.getters.communityBody)
+      await store.dispatch('getCommunitySquare', params)
+      //store.commit('SET_PAGINATION', store.getters.communityBody)
       return {title: `棒客-${store.getters.communityInfo.name}-广场`}
     },
     fetch () {

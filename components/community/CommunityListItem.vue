@@ -45,8 +45,7 @@
             </div>
             <span class="sixsix middle-show">{{itemData.user.nickname}}</span>
         </div>
-        <h4 class="home-list-title"><a href="#">【{{itemData.hasOwnProperty('summary_catalog') ?
-            itemData.summary_catalog.name_cn : itemData.article_type | toZhCn}}】{{itemData.title}}</a></h4>
+        <h4 class="home-list-title"><a href="#">【{{itemData.summary_name_cn}}】{{itemData.title}}</a></h4>
         <component v-bind:is="articleType" :itemData="itemData">
         </component>
     </div>
@@ -59,7 +58,7 @@
   import VideoTypeItem from '~/components/community/VideoTypeItem'
   import axios from 'axios'
   import api from '~/util/api.config'
-  
+
   export default {
     components: {
       FollowButton, MixTypeItem, ImageTypeItem, VideoTypeItem

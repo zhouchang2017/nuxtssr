@@ -3,7 +3,7 @@
     <ul class="home-list-title-ul" id="home-list-type">
       <nuxt-link
         v-for="item in listType" :key="item.id" :class="{'listcheck':item.name_en === isActive}"
-        tag="li" :to="{query: {article_type: item.name_en}}">{{item.name_cn}}
+        tag="li" :to="{query: {[queryField]: item.name_en}}">{{item.name_cn}}
       </nuxt-link>
       <div class="float-right marginTop checkboxShow">
         <input type="checkbox" v-model="onlyVideo" class="box-lab"/><label class="box-lab"></label>只看视频
@@ -19,15 +19,23 @@
 
   export default {
     props: {
+      queryField: {
+        type: String,
+        default: 'filter'
+      },
+      firstField: {
+        type: String,
+        default: 'all'
+      },
       types: Array,
       id: [Number, String],
       isShow: {
         type: [Number, Boolean],
         default: true
       },
-      isSquare: {
-        type: [Number, Boolean],
-        default: false
+      hasAll: {
+        type: Boolean,
+        default: true
       }
     },
     data () {
@@ -42,12 +50,13 @@
 
     computed: {
       isActive () {
-        return this.$route.query.article_type || 'all'
+        return this.$route.query[this.queryField] || this.firstField || this.types[0].name_en
       }
     },
     created () {
       this.loading = false
-      this.listType.push({summary_catalog_id: 0, name_en: 'all', name_cn: '全部'})
+      if (this.hasAll) this.listType.push({summary_catalog_id: 0, name_en: this.firstField, name_cn: '全部'})
+
       this.listType.push(...this.types)
       this.loading = true
     },

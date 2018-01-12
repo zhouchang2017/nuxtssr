@@ -1,22 +1,29 @@
 <template>
-    <summary-list/>
+  <summary-list/>
 </template>
 
 <script>
   import SummaryList from '~/components/community/SummaryList'
 
   export default {
-    // middleware: 'communitySub',
+    middleware: 'communitySub',
     components: {
       SummaryList
     },
-    scrollToTop: true,
+    // scrollToTop: true,
     data () {
       return {}
     },
-    async fetch ({store, query}) {
+    methods:{
+
+    },
+    async fetch ({store, params, query}) {
       console.log('内嵌路由数据加载')
-      await store.dispatch('getCommunitySubListPage', query)
+      await store.dispatch('getCommunitySubListPage', {params, query})
+      console.log('内嵌路由数据加载完成')
+    },
+    watch: {
+      // '$route': 'fetch'
     }
   }
 </script>

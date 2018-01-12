@@ -45,17 +45,21 @@ const API = {
     getArticle (id, summary_catalog_id) {
       return `/topic/${id}/summary_catalog/${summary_catalog_id}`
     },
-    getSummaryList (id, type) {
-      return `/api/topic/${id}/${type}`
+    // ！获取社区中主体内容
+    getSummary (id) {
+      return `/api/v1/topic/${id}/b`
     },
-    getSummary (id, type) {
-      return `/api/v1/topic/${id}/${type}`
-    },
+    // ！社区一级页模块
     getCommunity (id) {
       return `api/v1/topic/${id}`
     },
-    getCommunitySquare (id, api = true) {
-      return `api/topic/${id}/square?api=${api}`
+    // ！社区广场模块
+    getCommunitySquare (id) {
+      return `api/v1/topic/${id}/square`
+    },
+    // ! summaryCatalog子列表模块
+    getSummaryCatalog ({id, summaryType}) {
+      return `api/v1/topic/${id}/${summaryType}`
     }
   },
   // 用户相关
