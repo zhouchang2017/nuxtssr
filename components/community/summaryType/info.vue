@@ -4,7 +4,7 @@
       <b>{{community.community_info.name}}</b>聚集了{{community.community_info.user_num}}人加入，共{{community.hot_community_author.author_num}}人秀出自己的作品，里面有你吗？
     </div>
     <div class="head-img">
-      <nuxt-link v-for="user in community.hot_community_author.author_users" :to="`/user/${user.user_id}`">
+      <nuxt-link v-for="user in community.hot_community_author.author_users" :key="user.user_id" :to="`/user/${user.user_id}`">
         <img :src="user.avatar" alt="#">
       </nuxt-link>
     </div>

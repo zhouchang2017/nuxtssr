@@ -13,7 +13,8 @@ const store = () => new Vuex.Store({
     community, pagination
   },
   state: {
-    counter: 0
+    counter: 0,
+    user:{}
   },
   getters,
   actions,

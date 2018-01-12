@@ -1,25 +1,27 @@
 <template>
-  <div>
-    <div class="masterpiece-main">
-      <div class="masterpiece-main-top">
-      <info/>
-      </div>
-      <div class="masterpiece-main-content">
-        <navigation-bar :types="types" :hasAll="false"/>
-        <slot></slot>
-      </div>
-      <!--<layer-post-details />-->
+    <div>
+        <div class="masterpiece-main">
+            <div class="masterpiece-main-top">
+                <info/>
+                <user/>
+            </div>
+            <div class="masterpiece-main-content">
+                <navigation-bar :types="types" :hasAll="false"/>
+                <slot></slot>
+            </div>
+            <!--<layer-post-details />-->
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
   import NavigationBar from '~/components/community/NavigationBar'
-  import Info from '../info'
+  import info from '../info'
+  import user from '../user'
   // import LayerPostDetails from '~/components/LayerPostDetails'
 
   export default {
-    components: {NavigationBar, Info},
+    components: {NavigationBar, info, user},
     name: 'exhibition',
     data () {
       return {

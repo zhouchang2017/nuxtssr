@@ -65,7 +65,7 @@ const actions = {
     commit('SET_CONTENT_TYPE', data.community.contentSystem)
     commit('SET_MODULES', data.community)
   },
-  // summaryCatalog子列表页数据请求
+  // summaryCatalog子列表页模块数据请求
   async getSummaryCatalog ({commit}, params) {
     let url = `${api.community.getSummaryCatalog(params)}`
     console.log(url)

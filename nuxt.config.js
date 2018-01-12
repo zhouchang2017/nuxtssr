@@ -44,18 +44,18 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'moment'],
+    vendor: ['axios', 'moment', 'jquery'],
     /*
     ** Run ESLint on save
     */
     extend (config, ctx) {
       // if (ctx.dev && ctx.isClient) {
-        // config.module.rules.push({
-        //   enforce: 'pre',
-        //   test: /\.(js|vue)$/,
-        //   loader: 'eslint-loader',
-        //   exclude: /(node_modules)/
-        // })
+      // config.module.rules.push({
+      //   enforce: 'pre',
+      //   test: /\.(js|vue)$/,
+      //   loader: 'eslint-loader',
+      //   exclude: /(node_modules)/
+      // })
       // }
       // 添加cur文件支持
       config.module.rules.push({
