@@ -68,7 +68,7 @@
         title: this.title,
         meta: [
           {hid: 'description', name: 'description', content: 'My custom description'}
-        ],
+        ]
         // css: [{src: '~/less/topic.less', lang: 'less'}]
       }
     },

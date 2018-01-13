@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isShow" class="home-mian-left-block">
+  <div v-if="isShow" :class="_class">
     <ul class="home-list-title-ul" id="home-list-type">
       <nuxt-link
         v-for="item in listType" :key="item.id" :class="{'listcheck':item.name_en === isActive}"
@@ -19,6 +19,10 @@
 
   export default {
     props: {
+      _class: {
+        type: String,
+        default: 'home-mian-left-block'
+      },
       queryField: {
         type: String,
         default: 'filter'
@@ -50,7 +54,7 @@
 
     computed: {
       isActive () {
-        return this.$route.query[this.queryField] || this.firstField || this.types[0].name_en
+        return this.$route.query[this.queryField] || this.types[0].name_en
       }
     },
     created () {

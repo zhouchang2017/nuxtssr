@@ -60,6 +60,18 @@ const API = {
     // ! summaryCatalog子列表模块
     getSummaryCatalog ({id, summaryType}) {
       return `api/v1/topic/${id}/${summaryType}`
+    },
+    // !summaryCatalog exhibition列表
+    getExhibitionListBy (id) {
+      return `api/v1/topic/${id}/b/exhibition`
+    },
+    // !summaryCatalog masterpiece列表
+    getMasterpieceListBy (id) {
+      return `api/v1/topic/${id}/b/masterpiece`
+    },
+    // !summaryCatalog coupons列表
+    getCouponsListBy (id) {
+      return `api/v1/topic/${id}/b/coupons`
     }
   },
   // 用户相关

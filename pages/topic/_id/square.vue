@@ -28,9 +28,6 @@
 </template>
 
 <script>
-  import axios from 'axios'
-  import api from '~/util/api.config'
-
   export default {
     layout: 'topic',
     components: {

@@ -5,10 +5,9 @@
 </template>
 
 <script>
-  export default {
-  }
+  export default {}
 </script>
 
 <style lang="less">
-  @import '../less/topic_summary';
+@import '../less/topic_summary';
 </style>

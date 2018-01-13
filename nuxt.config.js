@@ -16,8 +16,8 @@ module.exports = {
       {hid: 'description', name: 'description', content: 'Nuxt.js project'}
     ],
     script: [
-      {src: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js'},
-      {src: 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js'}
+      // {src: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js'},
+      // {src: 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js'}
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
@@ -35,7 +35,7 @@ module.exports = {
     {src: '~/plugins/axios'},
     {src: '~/util/filter'},
     {src: '~/util/globalComponent'}
-    // {src: 'masonry-layout/dist/masonry.pkgd.min', ssr: false}
+    // {src: '~/plugins/masonry', ssr: false}
   ],
   css: [
     'swiper/dist/css/swiper.css',

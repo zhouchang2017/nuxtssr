@@ -44,8 +44,8 @@ const actions = {
   },
   // 子社区页面body数据请求
   async getCommunitySubListPage ({commit}, {params, query, is_choice = null, _with = null}) {
-    console.log(_with)
     let filter = _with ? encodeSearchParams({is_choice, ...query, ..._with}) : encodeSearchParams({is_choice, ...query})
+    console.log(filter)
     let url = api.community.getSummary(params.id)
     console.log(`${url}?${filter}`)
     let {data} = await axios.get(`${url}?${filter}`)
@@ -74,9 +74,34 @@ const actions = {
     commit('SET_COMMUNITY_INFO', {
       info: data.community_info, author_num: data.community.author_num, author_users: data.community.author_users
     })
-    // commit('SET_CONTENT_SYSTEM', data.community.contentSystem)
-    // commit('SET_CONTENT_TYPE', data.community.contentSystem)
-    // commit('SET_MODULES', data.community)
+    // commit('SET_MODULES', data.community)getExhibitionListBy
+  },
+  // 社区对应装备秀列表主体内容请求
+  async getExhibitionList ({commit}, {params, query, is_choice = null, _with = null}) {
+    let filter = _with ? encodeSearchParams({is_choice, ...query, ..._with}) : encodeSearchParams({is_choice, ...query})
+    console.log(filter)
+    let url = api.community.getExhibitionListBy(params.id)
+    console.log(`${url}?${filter}`)
+    let {data} = await axios.get(`${url}?${filter}`)
+    return data
+  },
+  // 社区对应作品列表主体内容请求
+  async getMasterpieceList ({commit}, {params, query, is_choice = null, _with = null}) {
+    let filter = _with ? encodeSearchParams({is_choice, ...query, ..._with}) : encodeSearchParams({is_choice, ...query})
+    console.log(filter)
+    let url = api.community.getMasterpieceListBy(params.id)
+    console.log(`${url}?${filter}`)
+    let {data} = await axios.get(`${url}?${filter}`)
+    return data
+  },
+  // 社区对应好价列表主题内容请求 -coupons
+  async getCouponsList ({commit}, {params, query, is_choice = null, _with = null}) {
+    let filter = _with ? encodeSearchParams({is_choice, ...query, ..._with}) : encodeSearchParams({is_choice, ...query})
+    console.log(filter)
+    let url = api.community.getSummary(params.id)
+    console.log(`${url}?${filter}`)
+    let {data} = await axios.get(`${url}?${filter}`)
+    return data
   }
 }
 
