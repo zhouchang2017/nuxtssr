@@ -1,8 +1,8 @@
 <template>
   <article class="masterpiece-main" role="main">
-  <component v-bind:is="$route.params.summaryType">
-    <nuxt-child/>
-  </component>
+    <component v-bind:is="$route.params.summaryType">
+      <nuxt-child/>
+    </component>
   </article>
 </template>
 
@@ -16,14 +16,12 @@
     components: {
       'exhibition': () => import('~/components/community/summaryType/page/exhibition')
     },
-    head () {
-      return {
-        title: this.title,
-        meta: [
-          {hid: 'description', name: 'description', content: 'My custom description'}
-        ],
-        css: [{src: '~/less/topic.less', lang: 'less'}]
-      }
+    head: {
+      title: this.title,
+      meta: [
+        {hid: 'description', name: 'description', content: 'My custom description'}
+      ],
+      css: [{src: '~/less/topic.less', lang: 'less'}]
     },
     async asyncData ({store, params}) {
       console.log(params)

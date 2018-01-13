@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "jquery": "^3.2.1",
+    "masonry-layout": "^4.2.1",
     "moment": "^2.20.1",
     "nuxt": "^1.0.0-rc11",
     "vue-awesome-swiper": "^3.1.0",

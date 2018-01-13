@@ -14,9 +14,7 @@
     data () {
       return {}
     },
-    methods:{
-
-    },
+    methods: {},
     async fetch ({store, params, query}) {
       console.log('内嵌路由数据加载')
       await store.dispatch('getCommunitySubListPage', {params, query})
