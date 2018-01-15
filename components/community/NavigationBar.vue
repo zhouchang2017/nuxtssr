@@ -54,7 +54,7 @@
 
     computed: {
       isActive () {
-        return this.$route.query[this.queryField] || this.types[0].name_en
+        return this.$route.query[this.queryField] || this.listType[0].name_en
       }
     },
     created () {

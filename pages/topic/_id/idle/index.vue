@@ -2,7 +2,7 @@
   <div class="idle_con">
     <ul class="idel_con_ul" v-if="body.data.length>0">
       <li v-for="item in body.data" :key="item.product_catalog_name + item.id">
-        <list-item :item="item" type="coupons"/>
+        <list-item :item="item" type="idle"/>
       </li>
     </ul>
     <ul class="idel_con_ul" v-else>
@@ -28,7 +28,7 @@
     async asyncData ({store, params, query}) {
       console.log('内嵌路由数据加载')
       console.log(params)
-      let res = await store.dispatch('getCouponsList', {params, query})
+      let res = await store.dispatch('getIdleList', {params, query})
       console.log('内嵌路由数据加载完成')
       return {body: res.body}
     },

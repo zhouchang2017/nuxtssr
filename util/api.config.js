@@ -72,6 +72,10 @@ const API = {
     // !summaryCatalog coupons列表
     getCouponsListBy (id) {
       return `api/v1/topic/${id}/b/coupons`
+    },
+    // !summaryCatalog idle列表
+    getIdleListBy (id) {
+      return `api/v1/topic/${id}/b/idle`
     }
   },
   // 用户相关

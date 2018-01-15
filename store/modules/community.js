@@ -98,7 +98,16 @@ const actions = {
   async getCouponsList ({commit}, {params, query, is_choice = null, _with = null}) {
     let filter = _with ? encodeSearchParams({is_choice, ...query, ..._with}) : encodeSearchParams({is_choice, ...query})
     console.log(filter)
-    let url = api.community.getSummary(params.id)
+    let url = api.community.getCouponsListBy(params.id)
+    console.log(`${url}?${filter}`)
+    let {data} = await axios.get(`${url}?${filter}`)
+    return data
+  },
+  // 社区对应闲置二手列表主题内容请求 -idle
+  async getIdleList ({commit}, {params, query, is_choice = null, _with = null}) {
+    let filter = _with ? encodeSearchParams({is_choice, ...query, ..._with}) : encodeSearchParams({is_choice, ...query})
+    console.log(filter)
+    let url = api.community.getIdleListBy(params.id)
     console.log(`${url}?${filter}`)
     let {data} = await axios.get(`${url}?${filter}`)
     return data

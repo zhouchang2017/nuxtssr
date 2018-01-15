@@ -3,19 +3,25 @@
     <div class="dileItem_l">
       <a href="#"><img class="bk-img" :src="item.avatar" alt=""/></a>
     </div>
-    <coupons-content-item :item="item">
+    <component v-bind:is="contentType" :item="item">
       {{item.published_at | timeLL}}
-    </coupons-content-item>
+    </component>
   </div>
 </template>
 <script>
   import CouponsContentItem from './CouponsContentItem'
+  import IdleContentItem from './IdleContentItem'
+
   export default {
     components: {
-      CouponsContentItem
+      CouponsContentItem, IdleContentItem
     },
     props: {
-      item: [Object, Array]
+      item: [Object, Array],
+      type: {
+        type: String,
+        default: 'coupons'
+      }
     },
     data () {
       return {
@@ -31,6 +37,11 @@
     },
     created () {
       this.loading = true
+    },
+    computed: {
+      contentType () {
+        return `${this.firstUpperCase(this.type)}ContentItem`
+      }
     }
   }
 </script>
